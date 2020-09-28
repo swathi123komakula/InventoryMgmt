@@ -1,0 +1,41 @@
+<html>
+
+    <body>
+
+
+       <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<h3 align = "center">Add and Update Supplier</h3><br><br>
+
+
+          <div class = "container-fluid">
+        <td><input type=button value="Insert Supplier"  (click)="insertSupplier()" class = "btn-info"></td><br>
+        <td><input type=button value="Update Supplier"  (click)="updateSupplier()" class = "btn-info"></td><br><br>
+        <table align=center bgcolor=lightgreen width=50% border=1 class=table>
+            <tr>
+                <th>supplier Id</th>
+                <td><input type=text [(ngModel)]="supplier.supplierId"></td>
+            </tr> 
+            <tr>
+                <th>Supplier Name</th>
+                <td> <input type=text [(ngModel)]="supplier.supplierName"></td>
+            </tr>
+            <tr>
+                <th>phoneNumber</th>
+                <td><input type=text [(ngModel)]="supplier.phoneNumber"></td>
+            </tr>
+            <tr>
+                <th> address</th>
+                <td><input type=text [(ngModel)]="supplier.address"></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>
+

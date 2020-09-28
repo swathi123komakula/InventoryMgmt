@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class = "container-fluid">
+  <h3 align = "center">Supplier Details</h3><br><br>
+  <input type=button value="ShowSuppliers" (click)="getSuppliers()" class = "btn-info"><br><br>
+<table align=center bgcolor=lightgreen width=50% border=1 class = "table">
+    <tr>
+      <th>Supplier Id</th>
+      <th>Supplier Name</th>
+      <th>phone Number</th>
+      <th>address</th>
+    </tr>
+   <tr *ngFor="let s of suppliers">
+      <td>{{s.supplierId}}</td>
+      <td>{{s.supplierName}}</td>
+      <td>{{s.phoneNumber}}</td> 
+      <td>{{s.address}}</td>
+    </tr>
+</table>
+</div>
+ 

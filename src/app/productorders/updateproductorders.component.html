@@ -1,0 +1,63 @@
+
+ <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class = "container-fluid">
+<h3 align="Center">Update Product Order</h3>  
+  <div class = "col-md-12">
+    <form>
+        <div class="form-group">
+            <label for = "productOrders.orderId">Order ID</label><br>
+	    <input type = "number" class = "form-control" name = "productOrders.orderId" [(ngModel)] = "productOrders.orderId" placeholder = "order Id" required>
+        </div>
+      
+        <div class="form-group row">
+            <button  class = "btn btn-info" (click) = "getProductOrder()">Get Order</button> 
+        </div>
+    </form>  
+  </div>
+   <table>
+            <tr>
+               <th>Order ID</th>
+               <td><input type=text [(ngModel)]="productOrders.orderId"></td>
+            </tr>
+            <tr>
+               <th>Product ID</th>
+               <td><input type=text [(ngModel)]="productOrders.products.productId"></td>
+            </tr>
+            <tr>
+               <th>Quantity Ordered</th>
+               <td><input type=text [(ngModel)]="productOrders.quantityValue"></td>
+            </tr>
+            <tr>
+               <th>Total Price</th>
+               <td><input type=text [(ngModel)]="productOrders.totalPrice"></td>
+            </tr>
+           <tr>
+               <th>WareHouse ID</th>
+               <td><input type=text [(ngModel)]="productOrders.wareHouseId"></td>
+            </tr>
+            <tr>
+               <th>Supplier ID</th>
+               <td><input type=text [(ngModel)]="productOrders.distributor.distributorId"></td>
+            </tr>
+            <tr>
+               <th>Date of Order</th>
+               <td><input type=text [(ngModel)]="productOrders.dateOfOrder"></td>
+            </tr>
+            <tr>
+               <th>Delivery Date</th>
+               <td><input type=text [(ngModel)]="productOrders.deliveryDate"></td>
+            </tr>
+            <tr>
+               <th>Delivery Status</th>
+               <td><input type=text [(ngModel)]="productOrders.deliveryStatus"></td>
+            </tr>
+
+	   <div class = "col-sm-5">
+	      <button class = "btn btn-primary" (click) = "updateProductOrder()">Update</button>
+           </div>

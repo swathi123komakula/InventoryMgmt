@@ -1,0 +1,74 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<h3 align = "center">Raw Material Order</h3>
+  <div class = "container">  
+    <form class = "needs-validation">
+      <div class="form-group">
+          <label for = "rawMaterialOrders.orderId">Order ID</label><br>
+	  <input type = "number" class = "form-control" name = "rawMaterialOrders.orderId" [(ngModel)] = "rawMaterialOrders.orderId" placeholder = "order Id" required>
+      </div> 
+      <div class = "form-group">
+          <button  class = "btn btn-info" (click) = "getRawMaterialOrder()">Get Details</button>
+      </div> 
+  </form>
+  <table align = "center" border = 1 class = "table" *ngIf="true">
+    <tr>
+      <th>Order ID</th>
+      <td>{{rawMaterialOrders.orderId}}</td>
+    </tr>
+   <tr>
+      <th>Raw Material Name</th>
+      <td>{{rawMaterialOrders.rawMaterials.rawMaterialName}}</td>
+    </tr>
+    <tr>
+      <th>Price Per Unit</th>
+      <td>{{rawMaterialOrders.rawMaterials.pricePerUnit}}</td>
+    </tr>
+    <tr>
+      <th>Quantity Ordered</th>
+      <td>{{rawMaterialOrders.quantityValue}}</td>
+    </tr>
+    <tr>
+      <th>Total Price</th>
+      <td>{{rawMaterialOrders.totalPrice}}</td>
+    </tr>
+    <tr>
+      <th>WareHouse ID</th>
+      <td>{{rawMaterialOrders.wareHouseId}}</td>
+    </tr>
+    <tr>
+      <th>Supplier ID</th>
+      <td>{{rawMaterialOrders.supplier.supplierId}}</td>
+    </tr>
+    <tr>
+      <th>Manufacturing Date</th>
+      <td>{{rawMaterialOrders.rawMaterials.manufacturingDate}}</td>
+    </tr>
+    <tr>
+      <th>Expiry Date</th>
+      <td>{{rawMaterialOrders.rawMaterials.expiryDate}}</td>
+    </tr>
+    <tr>
+      <th>Delivery Status</th>
+      <td>{{rawMaterialOrders.deliveryStatus}}</td>
+    </tr>
+    <tr>
+      <th>Order Date</th>
+      <td>{{rawMaterialOrders.dateOfOrder}}</td>
+    </tr>
+    <tr>
+      <th>Delivery Date</th>
+      <td>{{rawMaterialOrders.deliveryDate}}</td>
+    </tr>
+  </table>
+ </div>
+</body>
+<html>     

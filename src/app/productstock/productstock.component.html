@@ -1,0 +1,24 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+     <h3 align = "center">Product Stock </h3>
+   <pre>
+      <div style="background-color: lightblue;">
+      Batch No           :<input type=text [(ngModel)]="ps.batchNo">
+      Product Id         :<input type=text [(ngModel)]="ps.productId"/>
+      Quantity           :<input type=text [(ngModel)]="ps.quantity"/>
+      Distributor Id     :<input type=text [(ngModel)]="ps.distributorId"/>
+      Warehouse Id       :<input type=text [(ngModel)]="ps.warehouseId"/>
+      Manufacturing Date :<input type=date [(ngModel)]="ps.manufacturingDate"/>
+      Expiry Date        :<input type=date [(ngModel)]="ps.expiryDate"/>
+      <input type=button value="Add Stock" (click)="addStock()">
+      </div>
+      </pre>    
+  </body>
+</html>

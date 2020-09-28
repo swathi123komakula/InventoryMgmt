@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Inventory"
+    }
+  },
+  "defaultProject": "Inventory",
+  "cli": {
+    "analytics": false
+  }
 }

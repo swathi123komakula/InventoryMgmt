@@ -1,3 +1,4 @@
+<html>
   <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -6,14 +7,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  </head>
 
-<div class="container-fluid">
-	<h1 align="center">Inventory Management</h1>
-</div>
-<div class="container" *ngIf="render">
-<button routerLink="login" class="btn btn-primary" (click)="clicked()">Login</button>
-</div>
-<div class="container" *ngIf="!render">
-<button routerLink="login" class="btn btn-primary" (click)="logout()">Logout</button>
-</div>
-
+<body>
+  <h2 align = "center">Distributor Operations</h2><br><br>
+  <div class = "container">
+    <button class = "btn btn-primary" routerLink="/home/distributorop/distributor">Add / Update</button><br><br>
+    <button class = "btn btn-info" routerLink="/home/distributorop/alldistributors">Distributor Details</button>
+  </div>
 <router-outlet></router-outlet>
+</body>
+</html>

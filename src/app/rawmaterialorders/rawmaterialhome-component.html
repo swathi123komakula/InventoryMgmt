@@ -1,0 +1,16 @@
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+<h2 align = "center">Welcome to Raw Materials Operations</h2>
+<div class = "container">
+  <button class="btn btn-primary" routerLink="/home/rawmaterialsop/addrawmaterial">Order New Raw Material</button> <br><br>
+  <button class="btn btn-primary" routerLink="/home/rawmaterialsop/updaterawmaterial">Update Raw Material Order</button><br><br>
+  <button class="btn btn-info" routerLink="/home/rawmaterialsop/displayrawmaterial">Get Raw Material Order Details</button><br><br>
+  <button class="btn btn-danger" routerLink="/home/rawmaterialsop/deleterawmaterial">Delete Raw Material</button><br><br>
+  <button class="btn btn-info" routerLink="/home/rawmaterialsop/allorders">Get All Orders</button>
+</div>
+<router-outlet></router-outlet>

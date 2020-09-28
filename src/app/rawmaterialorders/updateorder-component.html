@@ -1,0 +1,63 @@
+
+ <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<div class = "container-fluid">
+<h3 align="Center">Update Raw Material Order</h3>  
+  <div class = "col-md-12">
+    <form>
+        <div class="form-group">
+            <label for = "rawMaterialOrders.orderId">Order ID</label><br>
+	    <input type = "number" class = "form-control" name = "rawMaterialOrders.orderId" [(ngModel)] = "rawMaterialOrders.orderId" placeholder = "order Id" required>
+        </div>
+      
+        <div class="form-group row">
+            <button  class = "btn btn-info" (click) = "getRawMaterialOrder()">Get Order</button> 
+        </div>
+    </form>  
+  </div>
+   <table>
+            <tr>
+               <th>Order ID</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.orderId"></td>
+            </tr>
+            <tr>
+               <th>Raw Material ID</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.rawMaterials.rawMaterialId"></td>
+            </tr>
+            <tr>
+               <th>Quantity Ordered</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.quantityValue"></td>
+            </tr>
+            <tr>
+               <th>Total Price</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.totalPrice"></td>
+            </tr>
+           <tr>
+               <th>WareHouse ID</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.wareHouseId"></td>
+            </tr>
+            <tr>
+               <th>Supplier ID</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.supplier.supplierId"></td>
+            </tr>
+            <tr>
+               <th>Date of Order</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.dateOfOrder"></td>
+            </tr>
+            <tr>
+               <th>Delivery Date</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.deliveryDate"></td>
+            </tr>
+            <tr>
+               <th>Delivery Status</th>
+               <td><input type=text [(ngModel)]="rawMaterialOrders.deliveryStatus"></td>
+            </tr>
+
+	   <div class = "col-sm-5">
+	      <button class = "btn btn-primary" (click) = "updateRawMaterialOrder()">Update</button>
+           </div>

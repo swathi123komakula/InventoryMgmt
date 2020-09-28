@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+<body>
+<h3 align="center">Raw Material Orders</h3>
+  <div class = "container-fluid">
+    <button class = "btn btn-info" (click) = "getRawMaterialsList()">Available Raw Materials</button><br><br>
+    <div class = "row-md-10">
+<table border=1 class = "table" *ngIf="flag"> 
+    <tr>
+	<th>RawMaterialId</th>
+	<th>Raw Material Name</th>
+	<th>Price Per Unit</th>
+        <th>Description</th>
+	<th>WareHouse ID</th>
+	<th>Supplier ID</th>
+	<th>Manufacturing Date</th>
+	<th>Expiry Date</th>
+    </tr>
+  <tr *ngFor="let rms of rawMaterialsList">
+     <td>{{rms.rawMaterialId}}</td>
+     <td>{{rms.rawMaterialName}}</td>
+     <td>{{rms.pricePerUnit}}</td>  
+     <td>{{rms.description}}</td> 
+     <td>{{rms.wareHouseId}}</td> 
+     <td>{{rms.supplierId}}</td>  
+     <td>{{rms.manufacturingDate}}</td> 
+     <td>{{rms.expiryDate}}</td>  
+   </tr>
+</table>
+  </div><br>
+    <form>
+    <div class = "container">
+    <div class = "col-md-12">
+      <div class="form-group">
+        <label for="rawMaterialOrders.rawMaterials.rawMaterialId">Raw Material ID</label><br>
+	<input type = "text" class = "form-control" name = "rawMaterialOrders.rawMaterials.rawMaterialId" [(ngModel)] = "rawMaterialOrders.rawMaterials.rawMaterialId" placeholder = "raw material id" required>
+      </div>
+      <div class="form-group">
+        <label for="rawMaterialOrders.quantityValue">Quantity Required</label><br>
+	<input type = "number" class = "form-control" name = "rawMaterialOrders.quantityValue" [(ngModel)] = "rawMaterialOrders.quantityValue" placeholder = "quantity required" required>
+      </div>
+      <div class="form-group">
+        <label for="rawMaterialOrders.wareHouseId">WareHouse ID</label><br>
+	<input type = "number" class = "form-control" name = "rawMaterialOrders.wareHouseId" [(ngModel)] = "rawMaterialOrders.wareHouseId" placeholder = "warehouse Id" required>
+      </div>
+      <div class="form-group">
+        <label for="rawMaterialOrders.supplier.supplierId">Supplier ID</label><br>
+	<input type = "number" class = "form-control" name = "rawMaterialOrders.supplier.supplierId" [(ngModel)] = "rawMaterialOrders.supplier.supplierId" placeholder = "supplier Id" required>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-5">
+             <button class="btn btn-primary" (click)="addRawMaterialOrder()">Order</button>
+        </div>
+        </div>
+    </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>

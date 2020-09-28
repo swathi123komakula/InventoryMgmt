@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+<body>
+<h3 align="center">Product Orders</h3>
+  <div class = "container-fluid">
+    <button class = "btn btn-info" (click) = "getProductsList()">Available Products</button><br><br>
+    <div class = "row-md-10">
+<table border=1 class = "table" *ngIf="flag"> 
+    <tr>
+	<th>Product Id</th>
+	<th>Product Name</th>
+	<th>Price Per Unit</th>
+        <th>Description</th>
+	<th>WareHouse ID</th>
+	<th>Distributor ID</th>
+	<th>Manufacturing Date</th>
+	<th>Expiry Date</th>
+    </tr>
+  <tr *ngFor="let pd of productsList">
+     <td>{{pd.productId}}</td>
+     <td>{{pd.productName}}</td>
+     <td>{{pd.pricePerUnit}}</td>  
+     <td>{{pd.description}}</td> 
+     <td>{{pd.wareHouseId}}</td> 
+     <td>{{pd.distributorId}}</td>  
+     <td>{{pd.manufacturingDate}}</td> 
+     <td>{{pd.expiryDate}}</td>  
+   </tr>
+</table>
+  </div><br>
+    <form>
+    <div class = "container">
+    <div class = "col-md-12">
+      <div class="form-group">
+        <label for="productOrders.products.productId">Product ID</label><br>
+	<input type = "text" class = "form-control" name = "productOrders.products.productId" [(ngModel)] = "productOrders.products.productId" placeholder = "product id" required>
+      </div>
+      <div class="form-group">
+        <label for="productOrders.quantityValue">Quantity Required</label><br>
+	<input type = "text" class = "form-control" name = "productOrders.quantityValue" [(ngModel)] = "productOrders.quantityValue" placeholder = "quantity required" required>
+      </div>
+      <div class="form-group">
+        <label for="productOrders.wareHouseId">WareHouse ID</label><br>
+	<input type = "number" class = "form-control" name = "productOrders.wareHouseId" [(ngModel)] = "productOrders.wareHouseId" placeholder = "warehouse Id" required>
+      </div>
+      <div class="form-group">
+        <label for="productOrders.distributor.distributorId">Distributor ID</label><br>
+	<input type = "number" class = "form-control" name = "productOrders.distributor.distributorId" [(ngModel)] = "productOrders.distributor.distributorId" placeholder = "distributor Id" required>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-5">
+             <button class="btn btn-primary" (click)="addProductOrder()">Order</button>
+        </div>
+        </div>
+    </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
